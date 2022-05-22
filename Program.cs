@@ -14,7 +14,7 @@ namespace Kalkulator
         [STAThread]
         static void Main()
         {
-            //provera
+            //provera2
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new Form1());
