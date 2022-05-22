@@ -521,7 +521,10 @@ namespace Kalkulator
                 if (calculatorDisplay.Text.StartsWith("-"))
                 {
                     calculatorDisplay.Text = calculatorDisplay.Text.Substring(1);
-                    userInput = userInput.Substring(1);
+                    if (!string.IsNullOrEmpty(userInput))
+                        userInput = userInput.Substring(1);
+                    if (!string.IsNullOrEmpty(result.ToString()))
+                        result = Convert.ToDouble(result.ToString().Substring(1));
                 }
                 else if (!string.IsNullOrEmpty(calculatorDisplay.Text) && decimal.Parse(calculatorDisplay.Text) != 0)
                 {
