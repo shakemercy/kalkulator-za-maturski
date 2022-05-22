@@ -431,6 +431,11 @@ namespace Kalkulator
                 userInput = (1 / result).ToString();
                 result = 1 / result;
             }
+            else if (operationClicked == true && userInput == "")
+            {
+                result = 1 / result;
+                calculatorDisplay.Text = result.ToString();
+            }
             else
             {
                 calculatorDisplay.Text += 1 / Double.Parse(userInput);
@@ -453,6 +458,11 @@ namespace Kalkulator
                 userInput = Math.Pow(result, 2).ToString();
                 result = Math.Pow(result, 2);
             }
+            else if (operationClicked == true && userInput == "")
+            {
+                result = Math.Pow(result, 2);
+                calculatorDisplay.Text = result.ToString();
+            }
             else 
             {
                 calculatorDisplay.Text += Math.Pow(Double.Parse(userInput), 2);
@@ -474,6 +484,10 @@ namespace Kalkulator
                 calculatorDisplay.Text += Math.Sqrt(result);
                 userInput = Math.Sqrt(result).ToString();
                 result = Math.Sqrt(result);
+            }
+            else if (operationClicked == true && userInput == "") { 
+                result = Math.Sqrt(result);
+                calculatorDisplay.Text = result.ToString();    
             }
             else
             {
