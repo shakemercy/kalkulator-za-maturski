@@ -524,7 +524,7 @@ namespace Kalkulator
                     if (!string.IsNullOrEmpty(userInput))
                         userInput = userInput.Substring(1);
                     if (!string.IsNullOrEmpty(result.ToString()))
-                        result = Convert.ToDouble(result.ToString().Substring(1));
+                        result *= -1;
                 }
                 else if (!string.IsNullOrEmpty(calculatorDisplay.Text) && decimal.Parse(calculatorDisplay.Text) != 0)
                 {
