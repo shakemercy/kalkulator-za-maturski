@@ -27,16 +27,10 @@ namespace Kalkulator
 
         private void num0_Click(object sender, EventArgs e)
         {
-            if (ifPreviouslyModified)
-            {
-                ifPreviouslyModified = false;
-                userInput = "";
-            }
-            if (operationClicked)
-            {
-                userInput = "";
-                operationClicked = false;
-            }
+            userInput = "";
+            ifPreviouslyModified = false;
+            operationClicked = false;
+
             if (equalsClicked)
             {
                 result = 0;
@@ -52,17 +46,10 @@ namespace Kalkulator
 
         private void num1_Click(object sender, EventArgs e)
         {
-//prvi_button
-            if (ifPreviouslyModified)
-            {
                 ifPreviouslyModified = false;
                 userInput = "";
-            }
-            if (operationClicked)
-            {
-                userInput = "";
                 operationClicked = false;
-            }
+
             if (equalsClicked)
             {
                 result = 0;
@@ -75,16 +62,10 @@ namespace Kalkulator
 
         private void num2_Click(object sender, EventArgs e)
         {
-            if (ifPreviouslyModified)
-            {
                 ifPreviouslyModified = false;
                 userInput = "";
-            }
-            if (operationClicked)
-            {
-                userInput = "";
                 operationClicked = false;
-            }
+
             if (equalsClicked)
             {
                 result = 0;
@@ -97,16 +78,11 @@ namespace Kalkulator
 
         private void num3_Click(object sender, EventArgs e)
         {
-            if (ifPreviouslyModified)
-            {
+
                 ifPreviouslyModified = false;
                 userInput = "";
-            }
-            if (operationClicked)
-            {
-                userInput = "";
                 operationClicked = false;
-            }
+
             if (equalsClicked)
             {
                 result = 0;
@@ -119,16 +95,9 @@ namespace Kalkulator
 
         private void num4_Click(object sender, EventArgs e)
         {
-            if (ifPreviouslyModified)
-            {
                 ifPreviouslyModified = false;
                 userInput = "";
-            }
-            if (operationClicked)
-            {
-                userInput = "";
                 operationClicked = false;
-            }
             if (equalsClicked)
             {
                 result = 0;
@@ -141,16 +110,11 @@ namespace Kalkulator
 
         private void num5_Click(object sender, EventArgs e)
         {
-            if (ifPreviouslyModified)
-            {
+
                 ifPreviouslyModified = false;
                 userInput = "";
-            }
-            if (operationClicked)
-            {
-                userInput = "";
                 operationClicked = false;
-            }
+
             if (equalsClicked)
             {
                 result = 0;
@@ -163,16 +127,10 @@ namespace Kalkulator
 
         private void num6_Click(object sender, EventArgs e)
         {
-            if (ifPreviouslyModified)
-            {
                 ifPreviouslyModified = false;
                 userInput = "";
-            }
-            if (operationClicked)
-            {
-                userInput = "";
                 operationClicked = false;
-            }
+
             if (equalsClicked)
             {
                 result = 0;
@@ -185,16 +143,11 @@ namespace Kalkulator
 
         private void num7_Click(object sender, EventArgs e)
         {
-            if (ifPreviouslyModified)
-            {
+
                 ifPreviouslyModified = false;
                 userInput = "";
-            }
-            if (operationClicked)
-            {
-                userInput = "";
                 operationClicked = false;
-            }
+
             if (equalsClicked)
             {
                 result = 0;
@@ -206,17 +159,11 @@ namespace Kalkulator
         }
 
         private void num8_Click(object sender, EventArgs e)
-        {
-            if (ifPreviouslyModified)
-            {
+        { 
                 ifPreviouslyModified = false;
                 userInput = "";
-            }
-            if (operationClicked)
-            {
-                userInput = "";
                 operationClicked = false;
-            }
+
             if (equalsClicked)
             {
                 result = 0;
@@ -229,16 +176,10 @@ namespace Kalkulator
 
         private void num9_Click(object sender, EventArgs e)
         {
-            if (ifPreviouslyModified)
-            {
                 ifPreviouslyModified = false;
                 userInput = "";
-            }
-            if (operationClicked)
-            {
-                userInput = "";
                 operationClicked = false;
-            }
+
             if (equalsClicked)
             {
                 result = 0;
@@ -419,7 +360,7 @@ namespace Kalkulator
 
         private void reciprocalButton_Click(object sender, EventArgs e)
         {
-            if (userInput == "0")
+            if (userInput == "")
             {
                 calculatorDisplay.Text = "Error";
                 return;
@@ -473,9 +414,14 @@ namespace Kalkulator
 
         private void rootButton_Click(object sender, EventArgs e)
         {
-            if (userInput == "0")
+            if (userInput == "")
+            {
+                return;
+            }
+            if (calculatorDisplay.Text.StartsWith("-"))
             {
                 calculatorDisplay.Text = "Error";
+                userInput = "";
                 return;
             }
             calculatorDisplay.Text = "";
@@ -506,9 +452,9 @@ namespace Kalkulator
                 userInput = calculatorDisplay.Text.Remove(calculatorDisplay.Text.Length - 1, 1);
                 calculatorDisplay.Text = calculatorDisplay.Text.Remove(calculatorDisplay.Text.Length - 1, 1);
             }
-
-            if (calculatorDisplay.Text == "")
+            if (calculatorDisplay.Text == "" || calculatorDisplay.Text.StartsWith("-"))
                 calculatorDisplay.Text = "0";
+
         }
 
         private void clearEntryButton_Click(object sender, EventArgs e)
