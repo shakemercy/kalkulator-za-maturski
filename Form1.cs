@@ -20,6 +20,80 @@ namespace Kalkulator
         bool operationClicked = false;
         double lastNum;
 
+        private void Form1_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.KeyCode.Equals(Keys.NumPad0) || e.KeyCode.Equals(Keys.D0))
+            {
+                num0.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.NumPad1) || e.KeyCode.Equals(Keys.D1))
+            {
+                num1.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.NumPad2) || e.KeyCode.Equals(Keys.D2))
+            {
+                num2.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.NumPad3) || e.KeyCode.Equals(Keys.D3))
+            {
+                num3.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.NumPad4) || e.KeyCode.Equals(Keys.D4))
+            {
+                num4.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.NumPad5) || e.KeyCode.Equals(Keys.D5))
+            {
+                num5.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.NumPad6) || e.KeyCode.Equals(Keys.D6))
+            {
+                num6.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.NumPad7) || e.KeyCode.Equals(Keys.D7))
+            {
+                num7.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.NumPad8) || e.KeyCode.Equals(Keys.D8))
+            {
+                num8.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.NumPad9) || e.KeyCode.Equals(Keys.D9))
+            {
+                num9.PerformClick();
+            }
+            //ENTER KOJI RADI ALI NE RADI RAZUMES
+            else if (e.KeyCode.Equals(Keys.Enter))
+            {
+                equalsButton.PerformClick();
+            }
+            //OSTALE OPERACIJE
+            else if (e.KeyCode.Equals(Keys.Multiply))
+            {
+                multiplyButton.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.Divide))
+            {
+                divideButton.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.Add))
+            {
+                plusButton.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.Subtract))
+            {
+                minusButton.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.Back))
+            {
+                undoButton.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.Delete))
+            {
+                clearEntryButton.PerformClick();
+            }
+        }
+
         public Form1()
         {
             InitializeComponent();
@@ -35,7 +109,7 @@ namespace Kalkulator
             if (operationClicked)
             {
                 userInput = "";
-                ifPreviouslyModified = false;
+                operationClicked = false;
             }
 
             if (equalsClicked)
@@ -61,7 +135,7 @@ namespace Kalkulator
             if (operationClicked)
             {
                 userInput = "";
-                ifPreviouslyModified = false;
+                operationClicked = false;
             }
 
             if (equalsClicked)
@@ -84,7 +158,7 @@ namespace Kalkulator
             if (operationClicked)
             {
                 userInput = "";
-                ifPreviouslyModified = false;
+                operationClicked = false;
             }
 
             if (equalsClicked)
@@ -107,7 +181,7 @@ namespace Kalkulator
             if (operationClicked)
             {
                 userInput = "";
-                ifPreviouslyModified = false;
+                operationClicked = false;
             }
 
             if (equalsClicked)
@@ -130,7 +204,7 @@ namespace Kalkulator
             if (operationClicked)
             {
                 userInput = "";
-                ifPreviouslyModified = false;
+                operationClicked = false;
             }
             if (equalsClicked)
             {
@@ -153,7 +227,7 @@ namespace Kalkulator
             if (operationClicked)
             {
                 userInput = "";
-                ifPreviouslyModified = false;
+                operationClicked = false;
             }
 
             if (equalsClicked)
@@ -176,7 +250,7 @@ namespace Kalkulator
             if (operationClicked)
             {
                 userInput = "";
-                ifPreviouslyModified = false;
+                operationClicked = false;
             }
 
             if (equalsClicked)
@@ -199,7 +273,7 @@ namespace Kalkulator
             if (operationClicked)
             {
                 userInput = "";
-                ifPreviouslyModified = false;
+                operationClicked = false;
             }
 
             if (equalsClicked)
@@ -222,7 +296,7 @@ namespace Kalkulator
             if (operationClicked)
             {
                 userInput = "";
-                ifPreviouslyModified = false;
+                operationClicked = false;
             }
 
             if (equalsClicked)
@@ -245,7 +319,7 @@ namespace Kalkulator
             if (operationClicked)
             {
                 userInput = "";
-                ifPreviouslyModified = false;
+                operationClicked = false;
             }
 
             if (equalsClicked)

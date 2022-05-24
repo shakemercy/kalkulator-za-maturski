@@ -57,6 +57,8 @@ namespace Kalkulator
             this.rootButton = new System.Windows.Forms.Button();
             this.negativeNumberButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
+            //event subscription
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             // 
             // num1
             // 
@@ -454,6 +456,7 @@ namespace Kalkulator
             this.ForeColor = System.Drawing.Color.Transparent;
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.KeyPreview = true;
             this.Margin = new System.Windows.Forms.Padding(4, 5, 4, 5);
             this.MaximizeBox = false;
             this.Name = "Form1";
