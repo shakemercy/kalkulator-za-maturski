@@ -10,6 +10,7 @@ using System.Windows.Forms;
 
 namespace Kalkulator
 {
+
     public partial class Form1 : Form
     {
         string function = "";
@@ -20,9 +21,13 @@ namespace Kalkulator
         bool operationClicked = false;
         double lastNum;
 
-        private void Form1_KeyDown(object sender, KeyEventArgs e)
+    private void Form1_KeyDown(object sender, KeyEventArgs e)
         {
-            if (e.KeyCode.Equals(Keys.NumPad0) || e.KeyCode.Equals(Keys.D0))
+            if (e.KeyCode.Equals(Keys.Enter))
+            {
+                equalsButton.PerformClick();
+            }
+            else if (e.KeyCode.Equals(Keys.NumPad0) || e.KeyCode.Equals(Keys.D0))
             {
                 num0.PerformClick();
             }
@@ -62,12 +67,7 @@ namespace Kalkulator
             {
                 num9.PerformClick();
             }
-            //ENTER KOJI RADI ALI NE RADI RAZUMES
-            else if (e.KeyCode.Equals(Keys.Enter))
-            {
-                equalsButton.PerformClick();
-            }
-            //OSTALE OPERACIJE
+            //OPERACIJE
             else if (e.KeyCode.Equals(Keys.Multiply))
             {
                 multiplyButton.PerformClick();

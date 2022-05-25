@@ -3,6 +3,7 @@ using System;
 
 namespace Kalkulator
 {
+
     partial class Form1
     {
         /// <summary>
@@ -22,7 +23,6 @@ namespace Kalkulator
             }
             base.Dispose(disposing);
         }
-
         #region Windows Form Designer generated code
 
         /// <summary>
@@ -57,8 +57,6 @@ namespace Kalkulator
             this.rootButton = new System.Windows.Forms.Button();
             this.negativeNumberButton = new System.Windows.Forms.Button();
             this.SuspendLayout();
-            //event subscription
-            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             // 
             // num1
             // 
@@ -462,6 +460,7 @@ namespace Kalkulator
             this.Name = "Form1";
             this.Text = "iCalculator";
             this.Load += new System.EventHandler(this.Form1_Load);
+            this.KeyDown += new System.Windows.Forms.KeyEventHandler(this.Form1_KeyDown);
             this.ResumeLayout(false);
 
         }
